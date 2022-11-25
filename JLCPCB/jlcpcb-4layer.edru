@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE designrules SYSTEM "eagle.dtd">
+<eagle version="9.7.0">
+<designrules name="jlcpcb-4layers *">
+<description language="en">&lt;b&gt;JLCPCB 4 layer design rules&lt;/b&gt;
+&lt;p&gt;A fixed version of @oxullo's EAGLE JLCPCB DRC file&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Board thickness: 1.6mm&lt;/li&gt;
+&lt;li&gt;Copper weight: outer layers: 1oz (35um), inner layers: 0.5oz (16.5um)&lt;/li&gt;
+&lt;/ul&gt;</description>
+<param name="layerSetup" value="(1+2*15+16)"/>
+<param name="mtCopper" value="0.035mm 0.0175mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.0175mm 0.035mm"/>
+<param name="mtIsolate" value="0.2mm 1.065mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm"/>
+<param name="mdWireWire" value="3.5mil"/>
+<param name="mdWirePad" value="0.2mm"/>
+<param name="mdWireVia" value="10mil"/>
+<param name="mdPadPad" value="5mil"/>
+<param name="mdPadVia" value="5mil"/>
+<param name="mdViaVia" value="0.5mm"/>
+<param name="mdSmdPad" value="5mil"/>
+<param name="mdSmdVia" value="5mil"/>
+<param name="mdSmdSmd" value="5mil"/>
+<param name="mdViaViaSameLayer" value="6mil"/>
+<param name="mnLayersViaInSmd" value="2"/>
+<param name="mdCopperDimension" value="0.2mm"/>
+<param name="mdDrill" value="0.33mm"/>
+<param name="mdSmdStop" value="0mil"/>
+<param name="msWidth" value="3.5mil"/>
+<param name="msDrill" value="0.2mm"/>
+<param name="msMicroVia" value="0.2mm"/>
+<param name="msBlindViaRatio" value="0.5"/>
+<param name="rvPadTop" value="0.4"/>
+<param name="rvPadInner" value="0"/>
+<param name="rvPadBottom" value="0.4"/>
+<param name="rvViaOuter" value="0"/>
+<param name="rvViaInner" value="0"/>
+<param name="rvMicroViaOuter" value="0"/>
+<param name="rvMicroViaInner" value="0"/>
+<param name="rlMinPadTop" value="0.3mm"/>
+<param name="rlMaxPadTop" value="80mil"/>
+<param name="rlMinPadInner" value="0.3mm"/>
+<param name="rlMaxPadInner" value="20mil"/>
+<param name="rlMinPadBottom" value="0.3mm"/>
+<param name="rlMaxPadBottom" value="80mil"/>
+<param name="rlMinViaOuter" value="0.13mm"/>
+<param name="rlMaxViaOuter" value="20mil"/>
+<param name="rlMinViaInner" value="0.13mm"/>
+<param name="rlMaxViaInner" value="20mil"/>
+<param name="rlMinMicroViaOuter" value="0.3mm"/>
+<param name="rlMaxMicroViaOuter" value="80mil"/>
+<param name="rlMinMicroViaInner" value="0.3mm"/>
+<param name="rlMaxMicroViaInner" value="80mil"/>
+<param name="psTop" value="-1"/>
+<param name="psBottom" value="-1"/>
+<param name="psFirst" value="-1"/>
+<param name="psElongationLong" value="100"/>
+<param name="psElongationOffset" value="100"/>
+<param name="mvStopFrame" value="1"/>
+<param name="mvCreamFrame" value="0"/>
+<param name="mlMinStopFrame" value="0.05mm"/>
+<param name="mlMaxStopFrame" value="0.05mm"/>
+<param name="mlMinCreamFrame" value="0mil"/>
+<param name="mlMaxCreamFrame" value="0mil"/>
+<param name="mlViaStopLimit" value="16mil"/>
+<param name="srRoundness" value="0"/>
+<param name="srMinRoundness" value="0mil"/>
+<param name="srMaxRoundness" value="0mil"/>
+<param name="slThermalIsolate" value="10mil"/>
+<param name="slThermalsForVias" value="0"/>
+<param name="dpMaxLengthDifference" value="10mm"/>
+<param name="dpGapFactor" value="2.5"/>
+<param name="checkAngle" value="0"/>
+<param name="checkFont" value="1"/>
+<param name="checkRestrict" value="1"/>
+<param name="checkStop" value="0"/>
+<param name="checkValues" value="0"/>
+<param name="checkNames" value="1"/>
+<param name="checkWireStubs" value="1"/>
+<param name="checkPolygonWidth" value="0"/>
+<param name="useDiameter" value="13"/>
+<param name="maxErrors" value="50"/>
+<layerstackup name="Default Layer Stack" type="Standard Stackup" display_unit="mic" roughness_model="0" allow_instack_material_edit="yes">
+ <layerdef type="Silk Screen" id="{c646908c-49b7-4407-be5e-24e5dc0d1da9}" name="Top Silk Screen"/>
+ <layerdef type="Solder Mask" id="{6ed9c51a-8535-44cf-8449-05f11aef7a23}" name="Top Solder Mask" locally_modified_material="yes">
+ <material name="User Defined" thickness="0.015240625mm" dielectric_constant="4" dissipation_factor="0.03" glass_transition_temperature="125degC" color="#FF008000" description="Solder Mask" source="User"/>
+</layerdef>
+ <layerdef type="Surface Finish" id="{9621749a-90ba-4a2d-b5d6-5555144e9dd5}" name="Top Surface Finish">
+ <material type="HASL" material="Lead-Tin" process="HASL" thickness="0.02mm" color="#FFF2F2F2" description="Hot Air Solder Leveling"/>
+</layerdef>
+ <layerdef type="Signal" id="{54d702ee-a6ca-45ec-82a3-855d4488df5d}" layer="1" name="Top" locally_modified_material="yes">
+ <material name="" thickness="0.035mm" weight="1oz" process="Electro Deposited" source="User"/>
+</layerdef>
+ <layerdef type="Prepreg" id="{6d13efab-61e3-42db-882b-baced6d122f1}" layer="2" name="Dielectric-2" locally_modified_material="yes">
+ <material name="User Defined" glass_style="" thickness="0.2mm" resin="50%" dielectric_constant_1g="4.5" dissipation_factor_1g="0.02" glass_transition_temperature="125degC" source="User"/>
+</layerdef>
+ <layerdef type="Signal" id="{19440496-a2bd-4238-bcf6-c8b200786ada}" layer="2" name="Route2" locally_modified_material="yes">
+ <material name="User Defined" thickness="0.018mm" weight="1/2oz" process="Electro Deposited" source="User"/>
+</layerdef>
+ <layerdef type="Core" id="{8d921c92-3ea6-4e0f-8a4c-6e15b087e270}" layer="1" name="Dielectric-1" locally_modified_material="yes">
+ <material name="User Defined" construction="" thickness="1.065mm" resin="50%" dielectric_constant_1g="4.5" dissipation_factor_1g="0.02" glass_transition_temperature="125degC" source="User"/>
+</layerdef>
+ <layerdef type="Signal" id="{e0d382b1-1d12-4e2b-84cf-43f169fa24ae}" layer="15" name="Route15" locally_modified_material="yes">
+ <material name="User Defined" thickness="0.018mm" weight="1/2oz" process="Electro Deposited" source="User"/>
+</layerdef>
+ <layerdef type="Prepreg" id="{bb393583-a550-4f59-8a52-e7e8e3a03ea4}" layer="3" name="Dielectric-3" locally_modified_material="yes">
+ <material name="User Defined" glass_style="" thickness="0.2mm" resin="50%" dielectric_constant_1g="4.5" dissipation_factor_1g="0.02" glass_transition_temperature="125degC" source="User"/>
+</layerdef>
+ <layerdef type="Signal" id="{ffd1609a-cdcf-4528-93c9-42a30c916ac6}" layer="16" name="Bottom" locally_modified_material="yes">
+ <material name="" thickness="0.035mm" weight="1oz" process="Electro Deposited" source="User"/>
+</layerdef>
+ <layerdef type="Surface Finish" id="{1ed771e7-1b70-4c18-864e-6109db3928a5}" name="Bottom Surface Finish">
+ <material type="HASL" material="Lead-Tin" process="HASL" thickness="0.02mm" color="#FFF2F2F2" description="Hot Air Solder Leveling"/>
+</layerdef>
+ <layerdef type="Solder Mask" id="{2d2b01bd-dd98-4dff-8807-e46a4788e8d3}" name="Bottom Solder Mask" locally_modified_material="yes">
+ <material name="User Defined" thickness="0.015240625mm" dielectric_constant="4" dissipation_factor="0.03" glass_transition_temperature="125degC" color="#FF008000" description="Solder Mask" source="User"/>
+</layerdef>
+ <layerdef type="Silk Screen" id="{844856e2-d894-4ebf-a332-5f50af5f286c}" name="Bottom Silk Screen"/>
+ <viadef name="Thru 1:16" startlayer="1" stoplayer="16" complement="no"/>
+ </layerstackup>
+ </designrules>
+</eagle>
